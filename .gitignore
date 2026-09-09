@@ -1,0 +1,24 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pyc
+__pycache__/
+.cursor/projects/
+
+# Unity generated
+apps/game-unity/Library/
+apps/game-unity/Temp/
+apps/game-unity/Obj/
+apps/game-unity/Logs/
+apps/game-unity/Build/
+apps/game-unity/Builds/
+apps/game-unity/UserSettings/
+
+Library/
+Temp/
+Obj/
+Logs/
+Build/
+Builds/
+UserSettings/

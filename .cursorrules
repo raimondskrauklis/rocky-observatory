@@ -1,0 +1,31 @@
+# Observatory — agent coding rules
+
+Unity-based game platform; first game is The Lost Observatory. Product spec: `game-platform-base-plan_v2.1.md`. Agent workflow: `AGENTS.md`.
+
+Priority order when goals conflict: capacity > foundation > game. Launch stack per v2.1: one production-named Droplet behind basic auth until launch; Compose runs `web`, `api`, `redis`; Keycloak is profile `identity` (off until `/admin/` with operator login exists); Celery/Beat is profile `jobs`, off. Do not enable player login, the `identity` or `jobs` profiles, or multi-tenant abstractions without a named feature.
+
+Do not copy kp-platform rules, Pipenv commands, or GitHub/Revy assumptions.
+
+## Stack (planned)
+
+- `apps/game-unity` — Unity 6.3 LTS (6000.3.x), C#
+- `apps/web` — React + TypeScript
+- `apps/api` — FastAPI
+- Identity — Keycloak at `auth.createit.digital` (Compose profile `identity`, off until a consumer exists)
+- Runtime — Docker Compose + host Nginx; DigitalOcean Managed PostgreSQL
+
+Follow lint and tests the repo actually has. Do not invent runners. Manifest `test_commands` is empty until apps exist.
+
+## Collaboration
+
+- Preserve offline play unless a change explicitly modifies that product contract.
+- Propose a plan before broad cross-project changes.
+- Prefer small, reviewable, reversible changes.
+- Do not change identity, production networking, secrets, deployment, or database schema without explicit review.
+- Do not put secrets in the Unity client. Do not trust client-submitted competitive, financial, or entitlement state.
+- Update tests, documentation, and release notes when behavior or operations change.
+- Never overwrite a working scene, asset, or deployment configuration without a Git commit or explicit review point.
+
+## Hosting
+
+This repo is not on GitHub (`hosting.kind = none`). Commit locally. Do not `gh pr` and do not push unless a remote exists and the user asks.
