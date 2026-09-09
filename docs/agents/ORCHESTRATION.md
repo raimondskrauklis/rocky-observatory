@@ -27,7 +27,7 @@ implement → tests → lint → phase gate → LOCAL BUGBOT → commit
 
 Read `.agent/manifest.json` before wiring. SSOT = `review_context.ssot`.
 
-On program switch: replace `programs[]` with a single new entry; update `BUGBOT.md`.
+On program switch: edit `.revy/review-context.json` first, copy to `.agent/review-context.json`, replace `programs[]` with a single new entry, update `BUGBOT.md`.
 
 ---
 

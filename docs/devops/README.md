@@ -62,7 +62,7 @@ Game plan also requires `docs/runbooks/deploy.md`, `rollback.md`, `restore.md`, 
 - Host Nginx and UFW stay on the Droplet; app processes stay in Compose.
 - PostgreSQL is DigitalOcean Managed — not a Droplet Postgres container in production.
 - Offline play is a product contract; hosting work must not make the game require the API to start.
-- Product git is private GitHub `raimondskrauklis/rocky-observatory` (`hosting.kind = github`). Revy is not installed. DevOps runtime is DigitalOcean — do not copy kp-platform GitHub Actions.
+- Product git is private GitHub `raimondskrauklis/rocky-observatory` (`hosting.kind = github`). Revy reviews PRs (same production App as `raimondskrauklis/revy`). Setup: [github-revy.md](../runbooks/github-revy.md). DevOps runtime is DigitalOcean — do not copy kp-platform GitHub Actions.
 
 ---
 
@@ -74,4 +74,4 @@ Game plan also requires `docs/runbooks/deploy.md`, `rollback.md`, `restore.md`, 
 | General plan | [DEVOPS_GENERAL_PLAN.md](./DEVOPS_GENERAL_PLAN.md) |
 | Operation files | [operations/](./operations/README.md) — 8 specs distilled from Revy, 2026-09-09 |
 | Execution files | next: `create-execution-plan` from general plan + operations |
-| Runbooks | empty on purpose until first operation ships |
+| Runbooks | [github-revy.md](../runbooks/github-revy.md) shipped; deploy/rollback/restore/incident empty until those operations ship |

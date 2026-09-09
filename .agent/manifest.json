@@ -29,18 +29,19 @@
   "hosting": {
     "kind": "github",
     "pr_tool": "gh",
-    "review_bot": null,
-    "note": "Private GitHub raimondskrauklis/rocky-observatory. Revy is not installed. Push when the user asks; do not open PRs unless asked. babysit-revy-pr stays off until Revy runs on this repo."
+    "review_bot": "revy",
+    "note": "Private GitHub raimondskrauklis/rocky-observatory. Production Revy (revy.createit.digital) reviews PRs — same GitHub App as raimondskrauklis/revy (dogfood). Push when the user asks; do not open PRs unless asked. Never push while Revy is pending."
   },
   "test_commands": {},
   "review_context": {
-    "ssot": ".agent/review-context.json",
-    "product_mirror": null,
+    "ssot": ".revy/review-context.json",
+    "agent_mirror": ".agent/review-context.json",
     "bugbot": ".cursor/BUGBOT.md",
-    "rule_packs": null
+    "rule_packs": ".revy/rules",
+    "sync_rule": "On program switch: edit .revy first, then copy to .agent/review-context.json"
   },
   "integrations": {
-    "revy": false
+    "revy": true
   },
   "flows": {
     "phase-loop": {
@@ -52,9 +53,9 @@
       "skill": "ship-changes"
     },
     "revy-babysit": {
-      "enabled": false,
+      "enabled": true,
       "skill": "babysit-revy-pr",
-      "note": "Enable only when GitHub PRs run Revy and the user wants the poll loop"
+      "note": "Poll/fix when the user asks. Never auto-start as a substitute for local Bugbot."
     }
   },
   "skills": {
@@ -64,6 +65,7 @@
       "phase-execution",
       "ship-changes",
       "chunk-execution",
+      "babysit-revy-pr",
       "create-findings",
       "create-general-plan",
       "create-execution-plan",

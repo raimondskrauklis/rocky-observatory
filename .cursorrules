@@ -28,4 +28,4 @@ Follow lint and tests the repo actually has. Do not invent runners. Manifest `te
 
 ## Hosting
 
-Private GitHub `raimondskrauklis/rocky-observatory` (`hosting.kind = github`). Push when the user asks. Do not open a PR unless asked. Revy is not installed — do not poll it or enable `babysit-revy-pr`.
+Private GitHub `raimondskrauklis/rocky-observatory` (`hosting.kind = github`). Production Revy reviews PRs (same GitHub App as `raimondskrauklis/revy`). Push when the user asks. Do not open a PR unless asked. Never push while Revy is `pending` / `in_progress` / `queued`. Setup: `docs/runbooks/github-revy.md`.

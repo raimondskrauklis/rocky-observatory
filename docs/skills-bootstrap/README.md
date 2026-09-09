@@ -14,6 +14,6 @@ Install the sibling **agent-workflow** pack into this product repo (The Lost Obs
 
 **Status: done (2026-09-09).** P0–P3 were executed directly in one session (no per-phase execution files — the program was small enough that the general plan served as the contract). Verification items 1–7 pass; item 7 (fresh history) was completed by an orphan `main` with the kp-platform refs kept under `refs/backup/` for 90 days of safety.
 
-**Re-audit triggers** — run `bootstrap-workflow` against `../agent-workflow` when any of these appear: `apps/*` trees (fill `test_commands`, switch `default_scope`), a Sentry MCP (`sentry-fix-issues`), Revy on this repo (`babysit-revy-pr`), or a pack version bump.
+**Re-audit triggers** — run `bootstrap-workflow` against `../agent-workflow` when any of these appear: `apps/*` trees (fill `test_commands`, switch `default_scope`), a Sentry MCP (`sentry-fix-issues`), or a pack version bump.
 
-**Hosting (2026-09-09):** Q2 (`hosting.kind = none`) was superseded when the private GitHub remote `raimondskrauklis/rocky-observatory` was added. Revy stays off. The findings file below is the bootstrap-time baseline.
+**Hosting (2026-09-09):** Q2 (`hosting.kind = none`) was superseded by private GitHub `raimondskrauklis/rocky-observatory`. Q6 (Revy off) was superseded the same day: `integrations.revy: true`, skill `babysit-revy-pr`, SSOT `.revy/review-context.json`. Consumer GitHub steps: [docs/runbooks/github-revy.md](../runbooks/github-revy.md). The findings file below is the bootstrap-time baseline.
