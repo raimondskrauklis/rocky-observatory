@@ -103,7 +103,7 @@ Each stream becomes one general-plan phase (or a tight pair). Exact method for N
 | Q6 | Database | **locked** | DigitalOcean Managed PostgreSQL; not a production container. |
 | Q7 | Registry | **locked** | DigitalOcean Container Registry; pinned tags. |
 | Q8 | Foreign patterns | **resolved** | Distilled from Revy (`~/projects/revy`) into `operations/*.md` with per-file source + delta. Not pasted. |
-| Q9 | GitHub | **locked** | Product `hosting.kind` stays `none`. DevOps is DigitalOcean, not `gh`. |
+| Q9 | GitHub | **locked** (updated 2026-09-09) | Product remote is private `raimondskrauklis/rocky-observatory` (`hosting.kind = github`). Revy is not installed. DevOps runtime is DigitalOcean, not GitHub Actions. |
 | Q10 | Staging DNS names | **deferred** (default proposed) | Not needed until the staging Droplet exists (Q3). Default: `staging.observatory.createit.digital` + `auth.staging.observatory.createit.digital`, one SAN cert on the staging Droplet. Confirm when that phase starts. |
 | Q11 | Launch Compose set | **locked** (plan v2.1, revised 2026-09-09) | `web`, `api`, `redis` (cache). Profile `identity`: `keycloak` — off (Q16). Profile `jobs`: broker Redis + Celery/Beat — off until a named task exists. Weekly Droplet backups on. |
 | Q12 | Port 80 / TLS challenge | **locked** (from Revy) | Certbot DNS-01 with the DigitalOcean plugin; port 80 closed in UFW and Cloud Firewall; no HTTP→HTTPS redirect exists, publish `https://` links only. |

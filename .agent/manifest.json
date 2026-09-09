@@ -27,10 +27,10 @@
     "pack_version": "2"
   },
   "hosting": {
-    "kind": "none",
-    "pr_tool": null,
+    "kind": "github",
+    "pr_tool": "gh",
     "review_bot": null,
-    "note": "User: this repo is not on GitHub. No origin. Ship/LOOP commit locally only."
+    "note": "Private GitHub raimondskrauklis/rocky-observatory. Revy is not installed. Push when the user asks; do not open PRs unless asked. babysit-revy-pr stays off until Revy runs on this repo."
   },
   "test_commands": {},
   "review_context": {

@@ -18,7 +18,7 @@ Planned layout: `apps/game-unity` (Unity 6.3 LTS / C#), `apps/web` (React + Type
 
 Active LOOP program: see review-context SSOT → `active_program` (`null` when idle).
 
-**LOOP contract:** The agent **executes until the program is done**. Do **not** ask “Continue?”. Local commit every phase. Honour `hosting.kind` — no GitHub PR or Revy unless this repo actually has them. **Only pause:** migration subphase.
+**LOOP contract:** The agent **executes until the program is done**. Do **not** ask “Continue?”. Local commit every phase. Honour `hosting.kind` — GitHub remote `raimondskrauklis/rocky-observatory`; push when the ship gate or user asks; no Revy until it is installed on this repo. **Only pause:** migration subphase.
 
 Read **only** the current `*_Pn_EXECUTION.md`. Each subphase Deliverable must be green before the next heading — then continue immediately.
 
@@ -31,7 +31,7 @@ Read **only** the current `*_Pn_EXECUTION.md`. Each subphase Deliverable must be
 | **Planning** | `create-findings`, `create-general-plan`, `create-execution-plan`, `architecture-peer-review`, `execution-peer-review`, `devils-advocate`, `post-finish-gap-pass` |
 | **Docs export** | `md-formatting`, `mermaid-diagrams`, `md-docx-export`, `docx-md-export` |
 
-Not installed: `babysit-revy-pr` (no GitHub/Revy), `sentry-fix-issues` (no Sentry MCP yet), `staging-validation`.
+Not installed: `babysit-revy-pr` (GitHub yes, Revy not on this repo), `sentry-fix-issues` (no Sentry MCP yet), `staging-validation`.
 
 Re-audit: invoke `bootstrap-workflow` against `pack_source.path` (sibling `../agent-workflow`).
 

@@ -19,7 +19,7 @@ Locked: Q1–Q9, Q11–Q13, Q15 (everything deployable is an image; host Nginx e
 - **Runbooks:** each phase that changes a component updates `docs/runbooks/` for that component (create on first ship).
 - **i18n:** operator docs in English.
 - **Tests:** smoke that matches the phase (SSH, `ufw status`, HTTP/HTTPS, `docker compose ps`) — exact commands live in execution files.
-- **Push:** `hosting.kind = none` — local commits only unless the user adds a remote.
+- **Push:** `hosting.kind = github` — private `raimondskrauklis/rocky-observatory`. Push when the user asks. No Revy.
 - **Adapt:** operation specs already carry Observatory names; never reintroduce `revy`, kp-platform, or other-product hostnames, container names, or realms.
 
 ---

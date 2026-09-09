@@ -62,7 +62,7 @@ Game plan also requires `docs/runbooks/deploy.md`, `rollback.md`, `restore.md`, 
 - Host Nginx and UFW stay on the Droplet; app processes stay in Compose.
 - PostgreSQL is DigitalOcean Managed — not a Droplet Postgres container in production.
 - Offline play is a product contract; hosting work must not make the game require the API to start.
-- `hosting.kind` in `.agent/manifest.json` is still `none` until this product has its own git remote. DevOps on DigitalOcean is **not** GitHub.
+- Product git is private GitHub `raimondskrauklis/rocky-observatory` (`hosting.kind = github`). Revy is not installed. DevOps runtime is DigitalOcean — do not copy kp-platform GitHub Actions.
 
 ---
 
