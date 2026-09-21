@@ -2,7 +2,7 @@
 
 ## Status
 
-**Status:** Vision captured — not yet a full game design document
+**Status:** Vision v1 — **superseded by `docs/game-design/vision.md`** (v2, 2026-09-21). Kept for history.
 
 **Game:** The Lost Observatory
 

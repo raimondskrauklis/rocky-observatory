@@ -1,0 +1,50 @@
+{
+  "corpus_version": 1,
+  "places": [
+    {
+      "slug": "viraclatvia",
+      "episode": 1,
+      "name": "VIRAC",
+      "full_name": "Ventspils International Radio Astronomy Centre",
+      "country": "Latvia",
+      "coordinates": {
+        "lat": 57.553,
+        "lon": 21.855
+      },
+      "instruments": [
+        "RT-32 radio antenna (32 m)",
+        "RT-16 radio antenna (16 m)",
+        "LOFAR-LATVIA station"
+      ],
+      "basics_taught": [
+        "counting",
+        "dark and light"
+      ],
+      "status": "locked",
+      "code_name": "Zvyozdochka (Little Star)",
+      "real_status": "operational",
+      "game_status": "dead, waiting",
+      "corpus_populated": true
+    },
+    {
+      "slug": "lyobservatory",
+      "episode": null,
+      "name": "LY Observatory",
+      "country": "Lithuania",
+      "coordinates": null,
+      "instruments": [],
+      "basics_taught": [],
+      "status": "candidate"
+    },
+    {
+      "slug": "tartuobservatory",
+      "episode": null,
+      "name": "Tartu Observatory",
+      "country": "Estonia",
+      "coordinates": null,
+      "instruments": [],
+      "basics_taught": [],
+      "status": "candidate"
+    }
+  ]
+}

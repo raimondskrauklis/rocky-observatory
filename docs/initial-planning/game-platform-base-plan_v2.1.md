@@ -1,3 +1,5 @@
+# docs/initial-planning/game-platform-base-plan_v2.1.md
+
 # Game Platform Base Plan — v2.1
 
 ## Status
@@ -61,7 +63,7 @@ The foundation is production-grade and small-scale. **Production-grade** here me
 ### Included from day one
 
 - Unity **6.3 LTS (6000.3.x)** game client, C#
-- Blender asset workflow
+- Blender **LTS** asset workflow (pin current LTS version in `tools/blender/BLENDER_VERSION`; see `docs/game-design/asset-pipeline.md`)
 - Git + Git LFS
 - Self-hosted delivery on `observatory.createit.digital` via host Nginx
 - Docker Compose for application services
@@ -327,6 +329,10 @@ From the first commit:
 Version Control Mode: Visible Meta Files
 Asset Serialization Mode: Force Text
 Editor version: 6000.3.x LTS, pinned in ProjectSettings/ProjectVersion.txt and CI
+
+**Agent-friendly scene structure:** gameplay and data live in C# classes and `ScriptableObject` assets so they are diffable, reviewable, and mergeable. Scenes are thin wiring: placed objects with component attach points, light groups, and interaction marker GameObjects. Inspector-only logic, especially on prefab instances, is avoided — it cannot be reviewed by an agent or by Bugbot/Revy. Prefabs should carry their own configuration; scenes reference them, not override them.
+
+**Blender version** is pinned in `tools/blender/BLENDER_VERSION`. Asset pipeline: `docs/game-design/asset-pipeline.md`.
 ```
 
 Track source assets with their `.meta` files. Git LFS for:
@@ -358,6 +364,8 @@ The riskiest technical decision in this plan is delivering a Blender-authored 3D
 | Compression / stripping | Brotli; Managed Stripping High; LTO release builds only | LTO is slow — release only |
 | Device matrix | Desktop Chrome, Firefox, Safari, Edge — release gate. Mobile browsers — best effort, not a gate for game one | |
 | CI build time | Budgeted; `Library/` cached between runs | Unity Web builds are slow and fragile |
+| Audio (music stems, compressed) | ≤ 6 MB per episode (≤ 6 stems, Vorbis, joint-stereo 44.1 kHz) | Ambient loops ≤ 1 MB; tones synthesised at runtime; voice clips ≤ 3 MB per episode |
+| Audio (voice) | Natural recorded voice, Sofi and Pluto; one voice session per episode or batch | Text boxes alongside voice; player can click through; mute supported; subtitles on by default |
 
 Texture budgets, mesh LOD policy, and scene partitioning are decided in game design, not after the build.
 
@@ -495,17 +503,13 @@ Enable the `jobs` profile only when M1 or M2 produces a real task. Enable the `i
 
 ## First Product: The Lost Observatory
 
-A short, atmospheric 3D exploration and puzzle game.
+A never-ending episodic exploration series about space and engineering optimism. The player is Sofi, a young, curious girl, and her companion Pluto, a quicksilver being that can take any form.
 
-**Release contract 0.1:** runs from `https://observatory.createit.digital/play/`; hosted on owned DigitalOcean infrastructure; Unity 6.3 LTS; deployable through the platform process; no mandatory login, payments, or backend dependency for play; clear beginning, progression, ending; ~10–15 minutes; landing, privacy, feedback; versioning, monitoring, error tracking, rollback; **meets the Web Build Budgets**.
+**Full design: `docs/game-design/`.** See `vision.md` for general decisions, `world.md` for characters and the tonal language, `episode-01/GDD.md` for the Episode 1 release contract.
 
-```text
-Goal: Restore power to an abandoned observatory and activate its telescope.
-Core actions: explore a small environment; interact; find and use items or clues;
-solve one connected environmental puzzle chain; restore power; clear ending.
-```
+**Episode 1 release contract (0.1):** Sofi and Pluto arrive at a big telescope (real location: VIRAC, Latvia). Sofi saw aliens in a cartoon and wants to find one. She restores the power, opens the dome, wakes the telescope, and discovers a signal the previous observer never answered. One place, roughly 10–15 minutes; runs from `https://observatory.createit.digital/play/`; Unity 6.3 LTS; deployable and rollback-able through the platform process; no login, payments, or backend dependency; local save; offline play; landing, privacy, feedback; **meets the Web Build Budgets including audio**.
 
-**Deferred product features:** mandatory login, cloud save, leaderboards, payments, advertising, multiplayer, chat, UGC, in-game economy, analytics platform.
+**Out of scope per episode:** mandatory login, cloud save, leaderboards, payments, advertising, multiplayer, chat, UGC, in-game economy, analytics platform, combat, procedural worlds, dialogue trees, inventory, showing the source of the signal, explaining Pluto's origin, more than one location per release.
 
 ## Distribution
 
