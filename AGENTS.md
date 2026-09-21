@@ -2,7 +2,7 @@
 
 Self-hosted Unity game platform; first game is *The Lost Observatory*. Stack and coding rules: [.cursorrules](.cursorrules).
 
-Planned layout: `apps/game-unity` (Unity 6.3 LTS / C#), `apps/web` (React + TypeScript), `apps/api` (FastAPI), Keycloak at `auth.createit.digital` (profile, off until `/admin/`). One production-named Droplet first, gated; staging Droplet later. See [game-platform-base-plan_v2.1.md](game-platform-base-plan_v2.1.md).
+Planned layout: `apps/game-unity` (Unity 6.3 LTS / C#), `apps/web` (React + TypeScript), `apps/api` (FastAPI), Keycloak at `auth.createit.digital` (profile, off until `/admin/`). One production-named Droplet first, gated; staging Droplet later. See [docs/initial-planning/game-platform-base-plan_v2.1.md](docs/initial-planning/game-platform-base-plan_v2.1.md).
 
 ## Agent workflow
 
