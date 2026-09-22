@@ -31,7 +31,7 @@ Only Episode 1 is locked. The rest are candidates the creator ranks, reorders, o
 | Ep | Place | Real instrument | Country | Why it fits the journey |
 |:---|:---|:---|:---|:---|
 | 1 | **VIRAC** | RT-32 radio antenna + optical | Latvia | A remote forest site with Cold War history; the game's origin |
-| 2 | **LY Observatory** (candidate) | Optical telescope, variable star research | Lithuania | A small, historically significant optical site; neighbour to Latvia; the next logical stop |
+| 2 | **LU Observatory** (candidate) | Optical telescope, variable star research | Latvia | Latvijas Universitātes observatorija; a small, historically significant optical site; the next logical stop |
 | 3 | **Tartu Observatory** (candidate) | Old optical + modern instruments; space research | Estonia | The Baltic chain continues; Tartu has a long astronomy tradition and real signal-processing work |
 | 4 | **A major mountain observatory** (candidate) | Large optical reflector | TBD | Altitude and atmosphere become the lesson; candidate: Calar Alto (Spain), La Silla (Chile), or another European site |
 | 5 | **A space telescope** (candidate) | Orbiting optical / infrared / radio instruments | Space | The horizon: Hubble, JWST, Gaia, or our own invented next-generation instrument |
@@ -90,8 +90,8 @@ Each place teaches what its real instrument actually does, from the very basics.
 
 ## Open questions
 
-- Confirm LY Observatory as Episode 2, or replace with another candidate.
-- Confirm or reorder the Baltic chain (VIRAC → LY → Tartu) before locking Episode 2.
+- Confirm LU Observatory as Episode 2, or replace with another candidate.
+- Confirm or reorder the Baltic chain (VIRAC → LU → Tartu) before locking Episode 2.
 - Decide which mountain observatory. European (cheaper to visit for reference photos) or world.
 - How Sofi reaches Episode 5: a control room on the ground, or a real launch. If a launch, where.
 - Whether the series ever leaves Europe, or if the map turns back for reasons the story finds.

@@ -27,10 +27,11 @@
       "corpus_populated": true
     },
     {
-      "slug": "lyobservatory",
+      "slug": "luobservatory",
       "episode": null,
-      "name": "LY Observatory",
-      "country": "Lithuania",
+      "name": "LU Observatory",
+      "full_name": "Latvijas Universitātes observatorija",
+      "country": "Latvia",
       "coordinates": null,
       "instruments": [],
       "basics_taught": [],
