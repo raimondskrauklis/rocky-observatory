@@ -26,7 +26,7 @@ We are not trying to ship fast. We are trying to understand what we are building
 | `apps/game-unity/` | The Unity project. Currently a scaffold with a grey-box slice spec; the first playable loop is being built. |
 | `.cursor/skills/craft-scene/` | The creative producer's workflow for crafting scenes. Agents and humans can follow the same process. |
 
-## How to start (for a beginner)
+## How to start
 
 1. **Read the game idea.** `docs/game-design/vision.md` — one sentence, then ten decisions. Five minutes.
 2. **Meet the characters.** `docs/game-design/world.md` — Sofi, Pluto, the Voice, the spider.
