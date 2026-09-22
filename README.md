@@ -44,14 +44,14 @@ We are not trying to ship fast. We are trying to understand what we are building
 ## Real places behind the fiction
 
 - **Episode 1: VIRAC**, Irbene, Latvia. A 32-metre radio telescope hidden in pine forest, built by the Soviet navy, abandoned in 1994, rebuilt by Latvian scientists.
-- **Episode 2 (candidate): LY Observatory**, Lithuania. A small optical observatory with a history of variable-star research.
+- **Episode 2 (candidate): LU Observatory**, Latvia. Latvijas Universitātes observatorija — a small optical observatory with a history of variable-star research.
 - **Episode 3 (candidate): Tartu Observatory**, Estonia. Space research and signal processing.
 
 Every fact in `corpus/` is sourced. Every fiction is marked.
 
-## Licence and ownership
+## A note on influences
 
-The code and creative design in this repo are original. No characters, names, sounds, or story elements are taken from any book, film, or game. Inspired by the *feeling* of contact stories; built from our own material. A licence file will be added before the first release.
+The repo is called Rocky for a reason — *Project Hail Mary* got us started. But everything here is written, drawn, and coded by us. No borrowed characters, names, or stories. We love the feeling of finding something and not knowing what it says; we just wanted to make our own version of that feeling. A licence file will arrive when the first release does.
 
 ## Links
 
